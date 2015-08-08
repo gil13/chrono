@@ -1,0 +1,46 @@
+<div class="container">
+
+    <p>{{t 'label.selectProfile'}} o crea uno nuevo</p>
+
+    <ul class="collection">
+        {{#each model as |profile|}}
+            <a href="#" class="collection-item" {{action 'selectProfile' profile}}>{{profile}}<span id="removeProfile" class="badge">x</span></a>{{!-- 
+            <li class="collection-item" >
+                <div>{{profile}}
+                    <a href="#" class="secondary-content">
+                        <i {{action 'removeProfile' target=view}} class="mdi-content-clear"></i>
+                    </a>
+                </div>
+            </li> --}}
+        {{else}} 
+            <li class="collection-item">
+                <div>No hay perfiles guardados
+                    <a href="#" class="secondary-content">
+                        <i class="mdi-content-add"></i>
+                    </a>
+                </div>
+            </li>
+        {{/each}}    
+    </ul>
+
+    <!-- Modal Trigger -->
+    <div class="center">
+        <a class="waves-effect waves-light btn modal-trigger blue-grey darken-1" href="#modal1" style="
+    width: 100%;">Crear nuevo perfil</a>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Crear un perfil nuevo</h4>
+            <p>Introduce el nombre del perfil que quiere guardar: </p>
+            {{input type="text" value=newProfile}}
+        </div>
+        <div class="modal-footer">
+            <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat" {{action 'addProfile'}}>Aceptar</a>
+            <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+        </div>
+    </div>
+
+</div>
+    

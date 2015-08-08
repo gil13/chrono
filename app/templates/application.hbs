@@ -1,0 +1,24 @@
+<nav>
+  <div class="nav-wrapper {{header.style}}">
+    <a href="#!" class="brand-logo">{{header.label}}</a>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="sass.html">Inicio</a></li>
+      <li><a href="components.html">Main</a></li>
+      <li><a href="javascript.html">Resumen</a></li>
+      <li><a href="mobile.html">Opciones</a></li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      {{#link-to 'application'}}<li><a href="#">Inicio</a></li>{{/link-to}}
+      {{#link-to 'main'}}<li><a href="#">Main</a></li>{{/link-to}}
+      {{#link-to 'report'}}<li><a href="#">Resumen</a></li>{{/link-to}}{{!-- 
+      {{#link-to 'options'}}<li><a href="#">Opciones</a></li>{{/link-to}} --}}
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  {{outlet}}
+</div>
+
+{{md-modal-container}}

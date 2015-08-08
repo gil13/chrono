@@ -1,0 +1,17 @@
+<div class="row">
+	<div class="col s12 m12 l12">
+		<a class="waves-effect waves-light btn cyan darken-3">Reset All Data</a>
+		<a class="waves-effect waves-light btn cyan darken-3" {{action 'openLanguage'}} >Change Language</a>
+
+		{{#if languageSelection}}
+			<ul class="collection">
+			    <li class="collection-item" {{action 'selectLanguage' 'es'}}>
+			        <div>Español<a href="#" class="secondary-content"><i class="mdi-action-done"></i></a></div>
+			    </li>
+			    <li class="collection-item" {{action 'selectLanguage' 'en'}}>
+			        <div>English<a href="#" class="secondary-content"><i class="mdi-action-done"></i></a></div>
+			    </li>   
+			</ul>
+		{{/if}}
+	</div>
+</div>	

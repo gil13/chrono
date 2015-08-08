@@ -1,0 +1,29 @@
+<div class="row">
+	<div class="col s12">
+
+		<br><br>
+
+		<table class="centered hoverable">
+			<thead>
+				<tr>
+					<th data-field="id">Perfiles</th>
+					<th data-field="id">Hoy</th>
+					<th data-field="name">Esta Semana</th>
+					<th data-field="price">Este mes</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr {{action 'selectProfile' model.id}}>
+					<td>{{model.id}}</td>
+					<td>{{mode.timeToday}}</td>
+					<td>{{mode.timeThisWeek}}</td>
+					<td>{{model.timeThisMonth}}</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<br><br><hr>
+
+	</div>
+</div>
